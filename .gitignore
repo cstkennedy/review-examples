@@ -1,0 +1,37 @@
+# General Ignore Rules
+**/documentation/
+**.o
+**.exe
+**.zip
+**.class
+**.jar
+!**gradle/wrapper/*.jar
+**.pyc
+
+# Binary Specific Ignore rules
+**/ll2
+**leak.out*
+**storage
+**runShapes
+**runshapes
+**updateRoom
+**registration
+**pointerReview
+
+**/build/
+**/.gradle/
+
+# Assignment Ignore Rules
+**Assignment-0*
+
+# Eclipse Project Ignore Rules
+**.project
+**.settings
+**.classpath
+
+# Latex Ignore Rules
+**.aux
+
+# Scratch (temp) File & Directory Ignore rules
+Scratch
+**.bak
