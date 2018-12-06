@@ -1,0 +1,110 @@
+-------------------------Description-------------------------
+Play one game of tic-tac-toe. A game consists of 1 or more 
+rounds. 
+
+During a round the players will be prompted to enter the row
+[0,2] and column [0,2] for their desired move. If the move is 
+valid--i.e., the cell is empty--the board is updated. If the 
+move is invalid, the user is re prompted. This process repeats
+until a valid selection is made.
+
+The round continues until either the board is full (draw) or
+a player wins. The standard rules of Tic-tac-toe apply. A 
+player must connect three cells in a row. This includes 
+diagonal, vertical, and horizontal wins.
+
+At the end of a round a yes/no prompt is displayed. If y or Y
+is entered, another round is setup. If anything else is entered
+the program exits.
+
+
+-------------------- Step 0 --------------------
+* Play Tic-Tac-Toe
+
+-------------------- Step 1 --------------------
+* Play Tic-Tac-Toe
+** Play one round
+** Prompt for another round
+
+-------------------- Step 2 --------------------
+* Play Tic-Tac-Toe
+** Play one round
+*** Intialize the game board
+*** Print the game board
+*** Play one round   
+** Prompt for another round
+
+-------------------- Step 3 --------------------
+* Play Tic-Tac-Toe
+** Play one round
+*** Intialize the game board
+**** if board exists 
+        clear board
+**** Create new board
+*** Print the game board
+*** Play one round   
+** Prompt for another round
+
+-------------------- Step 4 --------------------
+* Play Tic-Tac-Toe
+** Play one round
+*** Intialize the game board
+**** if board exists 
+        clear board
+**** Create new board
+*** Print the game board
+**** for each row
+        print row label
+        for each column
+            print cell
+            if applicable
+                print divider--i.e., "|"
+**** Print column labels
+*** Play one round   
+** Prompt for another round
+
+-------------------- Step 5 --------------------
+* Play Tic-Tac-Toe
+** Play one round
+*** Intialize the game board
+**** if board exists 
+        clear board
+**** Create new board
+*** Print the game board
+**** for each row
+        print row label
+        for each column
+            print cell
+            if applicable
+                print divider--i.e., "|"
+**** Print column labels
+*** Play one round   
+**** while round not over
+        for each player
+            Make move
+** Prompt for another round
+
+-------------------- Step 6 --------------------
+* Play Tic-Tac-Toe
+** Play one round
+*** Intialize the game board
+**** if board exists 
+        clear board
+**** Create new board
+*** Print the game board
+**** for each row
+        print row label
+        for each column
+            print cell
+            if applicable
+                print divider--i.e., "|"
+**** Print column labels
+*** Play one round   
+**** while round not over
+        for each player
+        Make move
+*****   Prompt for row and column
+*****   while one of row or column is invalid
+            reprompt
+*****   Update board 
+** Prompt for another round

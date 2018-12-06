@@ -1,0 +1,65 @@
+-------------------------Description-------------------------
+Play one game of tic-tac-toe. A game consists of 1 or more 
+rounds. 
+
+During a round the players will be prompted to enter the row
+[0,2] and column [0,2] for their desired move. If the move is 
+valid--i.e., the cell is empty--the board is updated. If the 
+move is invalid, the user is re prompted. This process repeats
+until a valid selection is made.
+
+The round continues until either the board is full (draw) or
+a player wins. The standard rules of Tic-tac-toe apply. A 
+player must connect three cells in a row. This includes 
+diagonal, vertical, and horizontal wins.
+
+At the end of a round a yes/no prompt is displayed. If y or Y
+is entered, another round is setup. If anything else is entered
+the program exits.
+
+----------------------------Tests----------------------------
+
+Representative:
+    (test000.in) Two players complete one round
+    (test001.in) Two players complete more than one round
+
+Functional:
+    (test000.in) Player 1 wins round
+    (test002.in) Player 2 wins round
+    (testxxx.in) Round ends in a draw
+    (testxxx.in) Game ends on a draw 
+
+    (test000.in) Players play exactly one round
+    (test001.in) Players play multiple rounds
+
+    (test003.in) Player 1 selects a previously selected cell (row and column)
+    (test003.in) Player 2 selects a previously selected cell (row and column)
+
+    (test000.in) Player wins with horizontal move 
+    (test004.in) Player wins with vertical move 
+    (testxxx.in) Player wins with diagonal move 
+
+Boundary & Special Value:
+    (Note that these are normally separate categories)
+
+    (test000.in) Player makes a move in the top-left corner
+    (test000.in) Player makes a move in the top-right corner
+    (testxxx.in) Player makes a move in the bottom-left corner
+    (testxxx.in) Player makes a move in the bottom-right corner
+
+    (test000.in) Player wins with all cells of the top row
+    (testxxx.in) Player wins with all cells of the bottom row
+
+    (testxxx.in) Player wins with all cells of the left column
+    (testxxx.in) Player wins with all cells of the right column
+
+------------------------Illegal Tests------------------------
+These tests are illegal and are not included in test 
+specifications documents. They are included here as part of 
+the Review Exercise. 
+
+Do Not Include Illegal Tests in your Project Test 
+Specifications Document
+
+    Player enters the number of a non-existent row
+    Player enters the number of a non-existent column

@@ -1,0 +1,56 @@
+-------------------------Description-------------------------
+Play one game of tic-tac-toe. A game consists of 1 or more 
+rounds. 
+
+During a round the players will be prompted to enter the row
+[0,2] and column [0,2] for their desired move. If the move is 
+valid--i.e., the cell is empty--the board is updated. If the 
+move is invalid, the user is re prompted. This process repeats
+until a valid selection is made.
+
+The round continues until either the board is full (draw) or
+a player wins. The standard rules of Tic-tac-toe apply. A 
+player must connect three cells in a row. This includes 
+diagonal, vertical, and horizontal wins.
+
+At the end of a round a yes/no prompt is displayed. If y or Y
+is entered, another round is setup. If anything else is entered
+the program exits.
+
+----------------------------Tests----------------------------
+This is an informal listing of POSSIBLE test cases. We will 
+discuss how to refine these into input. We will prune illegal
+and invalid tests cases. 
+
+Two players complete one round
+Two players complete more than one round
+
+Player 1 wins 
+Player 2 wins 
+Round ends in a draw
+Game ends on a draw 
+
+Players play exactly one round
+Players play multiple rounds
+
+Player enters the number of a non-existent row
+Player enters the number of a non-existent column
+
+Player 1 selects a previously selected cell (row and column)
+Player 2 selects a previously selected cell (row and column)
+
+Player wins with horizontal move 
+Player wins with vertical move 
+Player wins with diagonal move 
+
+Player makes a move in the top-left corner
+Player makes a move in the top-right corner
+Player makes a move in the bottom-left corner
+Player makes a move in the bottom-right corner
+
+Player wins with all cells of the top row
+Player wins with all cells of the bottom row
+
+Player wins with all cells of the left column
+Player wins with all cells of the right column
+

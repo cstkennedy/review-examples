@@ -1,0 +1,176 @@
+-------------------------Description-------------------------
+Play one game of tic-tac-toe. A game consists of 1 or more 
+rounds. 
+
+During a round the players will be prompted to enter the row
+[0,2] and column [0,2] for their desired move. If the move is 
+valid--i.e., the cell is empty--the board is updated. If the 
+move is invalid, the user is re prompted. This process repeats
+until a valid selection is made.
+
+The round continues until either the board is full (draw) or
+a player wins. The standard rules of Tic-tac-toe apply. A 
+player must connect three cells in a row. This includes 
+diagonal, vertical, and horizontal wins.
+
+At the end of a round a yes/no prompt is displayed. If y or Y
+is entered, another round is setup. If anything else is entered
+the program exits.
+
+-------------------- Step 0 --------------------
+* Play Tic-Tac-Toe
+
+-------------------- Step 1 --------------------
+* Play Tic-Tac-Toe
+** while another round is desired
+       intializeBoard()
+       playRound()
+       promptYesNo()
+
+-------------------- Step 2 --------------------
+* Play Tic-Tac-Toe
+** while another round is desired
+       intializeBoard()
+       playRound()
+       promptYesNo()
+
+function intializeBoard() {
+    ** if board exists 
+          clear board
+    ** Create new board
+}
+
+function playRound() {    
+}
+
+function promptYesNo() {    
+}
+
+-------------------- Step 3 --------------------
+* Play Tic-Tac-Toe
+** while another round is desired
+       intializeBoard()
+       playRound()
+       promptYesNo()
+
+function intializeBoard() {
+    ** if board exists 
+          clear board
+    ** Create new board
+}
+
+function playRound() {    
+    *** while round not over
+        for each player
+            printBoard()
+            move = promptForMove()
+
+            while not validMove( move )
+                move = promptForMove()
+
+}
+
+function printBoard() {
+}
+
+function promptForMove() {
+}
+
+function validMove( move ) {
+}
+
+function promptYesNo() {    
+}
+
+-------------------- Step 4 --------------------
+* Play Tic-Tac-Toe
+** while another round is desired
+       intializeBoard()
+       playRound()
+       promptYesNo()
+
+function intializeBoard() {
+    ** if board exists 
+          clear board
+    ** Create new board
+}
+
+function playRound() {    
+    *** while round not over
+        for each player
+            printBoard()
+            move = promptForMove()
+
+            while not validMove( move )
+                move = promptForMove()
+
+}
+
+function printBoard() {
+    **** for each row
+        print row label
+        for each column
+            print cell
+            if applicable
+                print divider--i.e., "|"
+}
+
+function promptForMove() {
+}
+
+function validMove( move ) {
+}
+
+function promptYesNo() {    
+}
+
+-------------------- Step 5 --------------------
+* Play Tic-Tac-Toe
+** while another round is desired
+       intializeBoard()
+       playRound()
+       promptYesNo()
+
+function intializeBoard() {
+    ** if board exists 
+          clear board
+    ** Create new board
+}
+
+function playRound() {    
+    *** while round not over
+        for each player
+            printBoard()
+            move = promptForMove()
+
+            while not validMove( move )
+                move = promptForMove()
+
+}
+
+function printBoard() {
+    **** for each row
+        print row label
+        for each column
+            print cell
+            if applicable
+                print divider--i.e., "|"
+}
+
+function promptForMove() {
+    // This is similar to the promptForDimensions function
+    // in the running Rom Update Review Example
+}
+
+function validMove( move ) {
+    ***** if row is valid && column is valid
+            if move has not already been made
+                return true
+
+    ***** return false
+}
+
+function promptYesNo() {    
+    // This is similar to the promptForDimensions function
+    // in the running Rom Update Review Example
+}
