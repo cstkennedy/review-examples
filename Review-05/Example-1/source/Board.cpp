@@ -85,7 +85,7 @@ bool Board::isFull() {
 /**
  * 
  */
-Board::print( std::ostream &outs ) { 
+void Board::print( std::ostream &outs ) { 
     //**** for each row
     for( int i = 0; i < 3; i++ ) {
         //print row label

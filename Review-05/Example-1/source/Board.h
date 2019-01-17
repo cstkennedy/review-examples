@@ -39,7 +39,7 @@ struct Board {
     /**
      * Print a gameboard
      */
-    print( std::ostream &outs );
+    void print(std::ostream &outs);
 };
 
 //void intializeBoard();
