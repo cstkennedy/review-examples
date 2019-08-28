@@ -11,7 +11,7 @@ using std::right;
 const std::string UNITS = "ft";
 
 /**
- * 
+ *
  */
 Room::Room() {
     this->length    = 1; // length = 1;
@@ -23,20 +23,20 @@ Room::Room() {
  *
  */
 Room::Room( double l, double w, double u ) {
-    length    = l; 
+    length    = l;
     width     = w;
     unit_cost = u;
 }
 
 /**
- * 
+ *
  */
 double Room::area() const {
     return ( width * length );
 }
 
 /**
- * 
+ *
  */
 double Room::flooringCost() const {
     return ( area() * unit_cost );
@@ -46,8 +46,8 @@ double Room::flooringCost() const {
  *
  */
 void Room::display(std::ostream &outs) const {
-    // Print dimensions to 1 decimal place.        
-    cout.precision(1);  
+    // Print dimensions to 1 decimal place.
+    cout.precision(1);
 
     // Let us add spacing--simulate a table
     println();

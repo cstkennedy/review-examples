@@ -11,14 +11,14 @@ using std::right;
 const std::string UNITS = "ft";
 
 /**
- * 
+ *
  */
 double Room::area() const {
     return ( width * length );
 }
 
 /**
- * 
+ *
  */
 double Room::flooringCost() const {
     return ( area() * unit_cost );
@@ -28,8 +28,8 @@ double Room::flooringCost() const {
  *
  */
 void Room::display() const {
-    // Print dimensions to 1 decimal place.        
-    cout.precision(1);  
+    // Print dimensions to 1 decimal place.
+    cout.precision(1);
 
     // Let us add spacing--simulate a table
     println();

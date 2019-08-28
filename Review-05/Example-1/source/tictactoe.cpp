@@ -17,7 +17,7 @@ void playRound();
 /**
  * Validate a move
  *
- * @param move 
+ * @param move
  *
  * @returns boolean true if the move is valid and false otherwise
  */
@@ -33,7 +33,7 @@ int main() {
     while( play_again ) {
         //intializeBoard(); - Moved to playRound
         playRound();
-        
+
         play_again = promptForYesNo( "Play another round? (Y/N)");
     }
 
@@ -78,7 +78,7 @@ void playRound() {
             //placeholder until remaining logic is implemented
             //draw = true;
             winner_declared = board.containsWinner();
-            draw            = board.isFull();             
+            draw            = board.isFull();
         }
         //Addition - trailing board print
         board.print( cout );

@@ -4,7 +4,7 @@
  * Prompt the user for an integer value
  *
  * @param msg message with which to prompt the user
- * 
+ *
  * @return double value input by the user
  *
  * @pre msg is not the empty string--i.e., !msg.empty()

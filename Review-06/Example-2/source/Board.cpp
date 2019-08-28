@@ -1,7 +1,7 @@
 #include "Board.h"
 
 void intializeBoard() {
-    //** if board exists 
+    //** if board exists
         //clear board
     //** Create new board
 }

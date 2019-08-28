@@ -67,7 +67,7 @@ void computeRoomMetrics( Room &r );
 void promptForDimensions( double &length, double &width );
 
 /**
- * Compute the area of a room and the cost of 
+ * Compute the area of a room and the cost of
  * flooring for the room
  */
 int main() {
@@ -77,7 +77,7 @@ int main() {
     // I will use nullptr instead of NULL. You will need
     // to enable the -std=C++11 flag in your IDE
     Room *rooms = nullptr;
-    
+
     // Until we discuss dynamic arrays--specifically array "resizing"
     // we will pre-allocate a user defined number of rooms
     int num_rooms = 0;
@@ -93,7 +93,7 @@ int main() {
     // We can now allocate one array of Rooms
     rooms = new Room[ num_rooms ];
 
-    // This is count controlled--i.e., we have a priori 
+    // This is count controlled--i.e., we have a priori
     // knowledge of a room count
     for( int i = 0; i < num_rooms; i++ ) {
         // Let us use string concatenation
@@ -111,17 +111,17 @@ int main() {
         println();
 
         // Note the inclusion of [i]. We are still passing one variable
-        // at a time into the function--i.e., one attribute of one element of an array. 
+        // at a time into the function--i.e., one attribute of one element of an array.
         promptForDimensions( rooms[i].length, rooms[i].width );
 
         computeRoomMetrics( rooms[i] );
-        println();      
+        println();
     }
 
     printAllRoomSummaries( rooms, num_rooms );
 
     // The program completed without issue
-    return 0;   
+    return 0;
 }
 
 
@@ -129,8 +129,8 @@ int main() {
  *
  */
 void printRoomSummary( const Room &prt ) {
-    // Print dimensions to 1 decimal place.        
-    cout.precision(1);  
+    // Print dimensions to 1 decimal place.
+    cout.precision(1);
 
     // Let us add spacing--simulate a table
     println();
@@ -162,7 +162,7 @@ void printAllRoomSummaries( Room *collection, int count ) {
     /*
      * This is the standard array for loop.
      * It is used every time an operation needs
-     * to be performed on every element in an 
+     * to be performed on every element in an
      * array--e.g.,
      *   - Input
      *   - Output

@@ -35,8 +35,8 @@ void Room::computeMetrics() {
  *
  */
 void Room::display() const {
-    // Print dimensions to 1 decimal place.        
-    cout.precision(1);  
+    // Print dimensions to 1 decimal place.
+    cout.precision(1);
 
     // Let us add spacing--simulate a table
     println();

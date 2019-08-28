@@ -23,14 +23,14 @@ using namespace std;
 void printAllRoomSummaries( Room *collection, int count );
 
 /**
- * Compute the area of a room and the cost of 
+ * Compute the area of a room and the cost of
  * flooring for the room
  */
 int main() {
     // I will use nullptr instead of NULL. You will need
     // to enable the -std=C++11 flag in your IDE
     Room *rooms = nullptr;
-    
+
     // Until we discuss dynamic arrays--specifically array "resizing"
     // we will pre-allocate a user defined number of rooms
     int num_rooms = 0;
@@ -48,7 +48,7 @@ int main() {
     // We can now allocate one array of Rooms
     rooms = new Room[ num_rooms ];
 
-    // This is count controlled--i.e., we have a priori 
+    // This is count controlled--i.e., we have a priori
     // knowledge of a room count
     for( int i = 0; i < num_rooms; i++ ) {
         // Option 1
@@ -59,18 +59,18 @@ int main() {
 
         uc = promptForDouble( ("Enter the cost ($/sq " + UNITS + ")") );
         w  = promptForDouble( "Enter the room width" );
-        l  = promptForDouble( "Enter the room length" );    
+        l  = promptForDouble( "Enter the room length" );
 
         rooms[i] = Room( l, w, uc );
         */
 
-        
+
         // Option 2
         /*
         rooms[i] = Room(
             promptForDouble( ("Enter the cost ($/sq " + UNITS + ")") ),
             promptForDouble( "Enter the room width" )                 ,
-            promptForDouble( "Enter the room length" )               
+            promptForDouble( "Enter the room length" )
         );
         */
 
@@ -78,21 +78,21 @@ int main() {
         /*
         rooms[i].unit_cost  = promptForDouble( ("Enter the cost ($/sq " + UNITS + ")") );
         rooms[i].width      = promptForDouble( "Enter the room width" );
-        rooms[i].length     = promptForDouble( "Enter the room length" );   
+        rooms[i].length     = promptForDouble( "Enter the room length" );
         */
 
-        // Option 3        
+        // Option 3
         rooms[i].setUnitCost( promptForDouble( ("Enter the cost ($/sq " + UNITS + ")") ) );
         rooms[i].setWidth(    promptForDouble( "Enter the room width"                  ) );
-        rooms[i].setLength(   promptForDouble( "Enter the room length"                 ) );  
-        
+        rooms[i].setLength(   promptForDouble( "Enter the room length"                 ) );
+
         println();
     }
 
     printAllRoomSummaries( rooms, num_rooms );
 
     // The program completed without issue
-    return 0;   
+    return 0;
 }
 
 /**
@@ -102,7 +102,7 @@ void printAllRoomSummaries( Room *collection, int count ) {
     /*
      * This is the standard array for loop.
      * It is used every time an operation needs
-     * to be performed on every element in an 
+     * to be performed on every element in an
      * array--e.g.,
      *   - Input
      *   - Output

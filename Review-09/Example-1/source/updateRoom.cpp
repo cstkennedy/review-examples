@@ -23,14 +23,14 @@ using namespace std;
 void printAllRoomSummaries( Room *collection, int count );
 
 /**
- * Compute the area of a room and the cost of 
+ * Compute the area of a room and the cost of
  * flooring for the room
  */
 int main() {
     // I will use nullptr instead of NULL. You will need
     // to enable the -std=C++11 flag in your IDE
     Room *rooms = nullptr;
-    
+
     // Until we discuss dynamic arrays--specifically array "resizing"
     // we will pre-allocate a user defined number of rooms
     int num_rooms = 0;
@@ -48,17 +48,17 @@ int main() {
     // We can now allocate one array of Rooms
     rooms = new Room[ num_rooms ];
 
-    for( int i = 0; i < num_rooms; i++ ) {        
+    for( int i = 0; i < num_rooms; i++ ) {
         rooms[i].setUnitCost( promptForDouble( ("Enter the cost ($/sq " + UNITS + ")") ) );
         rooms[i].setWidth(    promptForDouble( "Enter the room width"                  ) );
-        rooms[i].setLength(   promptForDouble( "Enter the room length"                 ) );  
-        
+        rooms[i].setLength(   promptForDouble( "Enter the room length"                 ) );
+
         println();
     }
 
     printAllRoomSummaries( rooms, num_rooms );
 
-    return 0;   
+    return 0;
 }
 
 /**
@@ -68,7 +68,7 @@ void printAllRoomSummaries( Room *collection, int count ) {
     /*
      * This is the standard array for loop.
      * It is used every time an operation needs
-     * to be performed on every element in an 
+     * to be performed on every element in an
      * array--e.g.,
      *   - Input
      *   - Output

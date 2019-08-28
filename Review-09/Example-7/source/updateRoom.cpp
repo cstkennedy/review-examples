@@ -17,14 +17,14 @@
 using namespace std;
 
 /**
- * Compute the area of a room and the cost of 
+ * Compute the area of a room and the cost of
  * flooring for the room
  */
 int main() {
     // I will use nullptr instead of NULL. You will need
     // to enable the -std=C++11 flag in your IDE
     RoomCollection rooms;
-    
+
     // This is used simply for user input
     // it is no longer used for the container (array)
     int num_rooms = 0;
@@ -37,15 +37,15 @@ int main() {
 
     // Set common formatting--in this case
     // fixed decimal notation
-    cout.setf( ios::fixed );    
+    cout.setf( ios::fixed );
 
-    for( int i = 0; i < num_rooms; i++ ) {   
+    for( int i = 0; i < num_rooms; i++ ) {
         Room new_room;
 
         new_room.setUnitCost( promptForDouble( ("Enter the cost ($/sq " + UNITS + ")") ) );
         new_room.setWidth(    promptForDouble( "Enter the room width"                  ) );
-        new_room.setLength(   promptForDouble( "Enter the room length"                 ) );  
-        
+        new_room.setLength(   promptForDouble( "Enter the room length"                 ) );
+
         rooms.add(new_room);
 
         println();
@@ -56,5 +56,5 @@ int main() {
     //rooms.display(cout);
     cout << rooms;
 
-    return 0;   
+    return 0;
 }

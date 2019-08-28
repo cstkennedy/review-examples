@@ -16,7 +16,7 @@
 using namespace std;
 
 /**
- * Compute the area of a room and the cost of 
+ * Compute the area of a room and the cost of
  * flooring for the room
  */
 int main() {
@@ -26,7 +26,7 @@ int main() {
     // I will use nullptr instead of NULL. You will need
     // to enable the -std=C++11 flag in your IDE
     Room *rooms = nullptr;
-    
+
     // Until we discuss dynamic arrays--specifically array "resizing"
     // we will pre-allocate a user defined number of rooms
     int num_rooms = 0;
@@ -42,7 +42,7 @@ int main() {
     // We can now allocate one array of Rooms
     rooms = new Room[ num_rooms ];
 
-    // This is count controlled--i.e., we have a priori 
+    // This is count controlled--i.e., we have a priori
     // knowledge of a room count
     for( int i = 0; i < num_rooms; i++ ) {
         // Let us use string concatenation
@@ -60,15 +60,15 @@ int main() {
         println();
 
         // Note the inclusion of [i]. We are still passing one variable
-        // at a time into the function--i.e., one attribute of one element of an array. 
+        // at a time into the function--i.e., one attribute of one element of an array.
         promptForDimensions( rooms[i].length, rooms[i].width );
 
         computeRoomMetrics( rooms[i] );
-        println();      
+        println();
     }
 
     printAllRoomSummaries( rooms, num_rooms );
 
     // The program completed without issue
-    return 0;   
+    return 0;
 }

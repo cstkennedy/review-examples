@@ -15,7 +15,7 @@ using namespace std;
  * Prompt the user for a floating point, *double*, value
  *
  * @param msg message to display as a user-prompt
- * 
+ *
  * @return double value entered by the user
  */
 double promptForDouble( std::string msg );
@@ -24,8 +24,8 @@ double promptForDouble( std::string msg );
  * Prompt the user for a Yes or No response
  *
  * @param msg message to display as a user-prompt
- * 
- * @return bool true if the user indicated Yes 
+ *
+ * @return bool true if the user indicated Yes
  *     and false otherwise
  */
 bool promptForYesNo( std::string msg );
@@ -37,7 +37,7 @@ bool promptForYesNo( std::string msg );
  * @param l length
  * @param w width
  * @param r_c cost for flooring
- * @param u_c cost for one sq. unit of flooring 
+ * @param u_c cost for one sq. unit of flooring
  * @param area flooring required for the room--in sq. units
  */
 void printRoomSummary( std::string units, double l, double w, double r_c, double u_c, double area );
@@ -56,7 +56,7 @@ void printRoomSummary( std::string units, double l, double w, double r_c, double
 void computeRoomMetrics( double length, double width, double unit_cost, double &area, double &room_cost );
 
 /**
- * Compute the area of a room and the cost of 
+ * Compute the area of a room and the cost of
  * flooring for the room
  */
 int main() {
@@ -79,10 +79,10 @@ int main() {
     // fixed decimal notation
     cout.setf( ios::fixed );
 
-    // Allow the user to process multiple rooms 
+    // Allow the user to process multiple rooms
     while( try_again ){
         // Let us use string concatenation
-        unit_cost = promptForDouble( 
+        unit_cost = promptForDouble(
             ( "Enter the cost ($/sq " + units + ")" )
         );
 
@@ -107,7 +107,7 @@ int main() {
     }
 
     // The program completed without issue
-    return 0;   
+    return 0;
 }
 
 /**
@@ -146,8 +146,8 @@ bool promptForYesNo( std::string msg ) {
  *
  */
 void printRoomSummary( std::string units, double l, double w, double r_c, double u_c, double area ) {
-    // Print dimensions to 1 decimal place.        
-    cout.precision(1);  
+    // Print dimensions to 1 decimal place.
+    cout.precision(1);
 
     // Let us add spacing--simulate a table
     cout << "\n";

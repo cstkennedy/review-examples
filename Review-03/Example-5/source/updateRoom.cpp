@@ -46,7 +46,7 @@ inline void println( std::ostream& outs=std::cout ) {
  * Prompt the user for a floating point, *double*, value
  *
  * @param msg message to display as a user-prompt
- * 
+ *
  * @return double value entered by the user
  */
 double promptForDouble( std::string msg );
@@ -55,8 +55,8 @@ double promptForDouble( std::string msg );
  * Prompt the user for a Yes or No response
  *
  * @param msg message to display as a user-prompt
- * 
- * @return bool true if the user indicated Yes 
+ *
+ * @return bool true if the user indicated Yes
  *     and false otherwise
  */
 bool promptForYesNo( std::string msg );
@@ -68,7 +68,7 @@ bool promptForYesNo( std::string msg );
  * @param l length
  * @param w width
  * @param r_c cost for flooring
- * @param u_c cost for one sq. unit of flooring 
+ * @param u_c cost for one sq. unit of flooring
  * @param area flooring required for the room--in sq. units
  */
 void printRoomSummary( double l, double w, double r_c, double u_c, double area );
@@ -95,7 +95,7 @@ void computeRoomMetrics( double length, double width, double unit_cost, double &
 void promptForDimensions( double &length, double &width );
 
 /**
- * Compute the area of a room and the cost of 
+ * Compute the area of a room and the cost of
  * flooring for the room
  */
 int main() {
@@ -122,7 +122,7 @@ int main() {
 
     // This variable is no longer necessary
     //bool try_again = true;
-    
+
     // Until we discuss dynamic arrays--specifically array "resizing"
     // we will pre-allocate a user defined number of rooms
     int num_rooms = 0;
@@ -149,14 +149,14 @@ int main() {
     rooms = new Room[ num_rooms ];
 
     //while( try_again ){
-    // This is now count controlled--i.e., we have a priori 
+    // This is now count controlled--i.e., we have a priori
     // knowledge of a room count
     //
     // Let us switch to a for loop
     for( int i = 0; i < num_rooms; i++ ) {
         // Let us use string concatenation
         double uc= 0; // temporary unit cost
-        uc = promptForDouble( 
+        uc = promptForDouble(
             ( "Enter the cost ($/sq " + UNITS + ")" )
         );
 
@@ -171,28 +171,28 @@ int main() {
         println();
 
         // Note the inclusion of [i]. We are still passing one variable
-        // at a time into the function--i.e., one attribute of one element of an array. 
-        promptForDimensions( 
-            rooms[i].length, 
-            rooms[i].width 
+        // at a time into the function--i.e., one attribute of one element of an array.
+        promptForDimensions(
+            rooms[i].length,
+            rooms[i].width
         );
 
-        computeRoomMetrics( 
-            rooms[i].length, 
-            rooms[i].width, 
-            rooms[i].unit_cost, 
-            rooms[i].area, 
-            rooms[i].room_cost 
-        );         
+        computeRoomMetrics(
+            rooms[i].length,
+            rooms[i].width,
+            rooms[i].unit_cost,
+            rooms[i].area,
+            rooms[i].room_cost
+        );
     }
 
     // We want to print all room summaries after all input is complete
     for( int i = 0; i < num_rooms; i++ ) {
-        printRoomSummary( 
-            rooms[i].length, 
-            rooms[i].width, 
+        printRoomSummary(
+            rooms[i].length,
+            rooms[i].width,
             rooms[i].room_cost,
-            rooms[i].unit_cost, 
+            rooms[i].unit_cost,
             rooms[i].area
         );
 
@@ -200,7 +200,7 @@ int main() {
     }
 
     // The program completed without issue
-    return 0;   
+    return 0;
 }
 
 /**
@@ -234,8 +234,8 @@ bool promptForYesNo( std::string msg ) {
  *
  */
 void printRoomSummary( double l, double w, double r_c, double u_c, double area ) {
-    // Print dimensions to 1 decimal place.        
-    cout.precision(1);  
+    // Print dimensions to 1 decimal place.
+    cout.precision(1);
 
     // Let us add spacing--simulate a table
     println();

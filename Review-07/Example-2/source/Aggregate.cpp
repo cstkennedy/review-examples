@@ -13,7 +13,7 @@ void printAllRoomSummaries( Room *collection, int count ) {
     /*
      * This is the standard array for loop.
      * It is used every time an operation needs
-     * to be performed on every element in an 
+     * to be performed on every element in an
      * array--e.g.,
      *   - Input
      *   - Output

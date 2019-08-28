@@ -17,7 +17,7 @@ void playRound();
 /**
  * Validate a move
  *
- * @param move 
+ * @param move
  *
  * @returns boolean true if the move is valid and false otherwise
  */

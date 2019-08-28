@@ -8,7 +8,7 @@ using namespace std;
 typedef int Move;
 
 void intializeBoard() {
-    //** if board exists 
+    //** if board exists
         //clear board
     //** Create new board
 }
@@ -51,7 +51,7 @@ bool validMove( Move move ) {
     //***** return false
 }
 
-bool promptYesNo() {    
+bool promptYesNo() {
     // This is simliar to the promptForYesNo function
     // in the running Line Review Example
 }

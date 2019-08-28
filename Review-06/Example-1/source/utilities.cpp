@@ -6,7 +6,7 @@
 const double EPSILON = 1e-4;
 
 /**
- * 
+ *
  */
 void println( std::ostream &outs ) {
     outs << "\n";
@@ -26,7 +26,7 @@ bool equals( double num_1, double num_2 ){
  */
 bool isZero( double num ) {
     // Why reinvent the wheel?
-    // The equals function already does this for 
+    // The equals function already does this for
     // any two numbers
     return (
         equals( num, 0 )

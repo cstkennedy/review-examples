@@ -4,7 +4,7 @@
  * Construct/initialize the gameboard
  */
 Board::Board() {
-    //** if board exists 
+    //** if board exists
         //clear board
     //** Create new board
 
@@ -83,9 +83,9 @@ bool Board::isFull() {
 }
 
 /**
- * 
+ *
  */
-void Board::print( std::ostream &outs ) { 
+void Board::print( std::ostream &outs ) {
     //**** for each row
     for( int i = 0; i < 3; i++ ) {
         //print row label
@@ -105,7 +105,7 @@ void Board::print( std::ostream &outs ) {
     }
 
     outs << "  ";
-    
+
     for( int j = 0; j < 3; j++ ) {
         outs << j << " ";
     }
