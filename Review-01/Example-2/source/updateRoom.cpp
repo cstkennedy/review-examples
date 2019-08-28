@@ -12,7 +12,7 @@
 using namespace std;
 
 /**
- * Compute the area of a room and the cost of 
+ * Compute the area of a room and the cost of
  * flooring for the room
  */
 int main() {
@@ -49,5 +49,5 @@ int main() {
          << "\n";
 
     // The program completed without issue
-    return 0;   
+    return 0;
 }

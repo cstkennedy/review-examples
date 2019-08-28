@@ -24,7 +24,7 @@ struct Board {
     /**
      * Determine if there are wither three "X" or "O" symbols in a row
      *
-     * @return true if there are three such symbols in a row 
+     * @return true if there are three such symbols in a row
      * and false otherwise
      */
     bool containsWinner();

@@ -15,7 +15,7 @@
  * The purpose of this class is to abstract the
  * details (hide the details) from the remainder of
  * the code. This serves to minimize the impact
- * in the event I need to change the underlying data 
+ * in the event I need to change the underlying data
  * structure.
  */
 class RoomCollection {

@@ -151,8 +151,8 @@ double Room::getUnitCost() const {
 
 /**
  * Room Stream Insertion (Output) Operator
- * 
- * This is often written as a wrapper for a 
+ *
+ * This is often written as a wrapper for a
  * display or print function.
  */
 inline

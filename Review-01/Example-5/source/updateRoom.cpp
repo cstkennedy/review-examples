@@ -12,7 +12,7 @@
 using namespace std;
 
 /**
- * Compute the area of a room and the cost of 
+ * Compute the area of a room and the cost of
  * flooring for the room
  */
 int main() {
@@ -23,7 +23,7 @@ int main() {
     double unit_cost = 0;
     double room_cost = 0;
 
-    // A boolean variable can be either true, yes, 
+    // A boolean variable can be either true, yes,
     // or false, no.
     //
     // We will use this var as our loop condition.
@@ -43,9 +43,9 @@ int main() {
     // notation
     cout.setf( ios::fixed );
 
-    // Allow the user to process multiple rooms 
+    // Allow the user to process multiple rooms
     while( try_again ){
-        // Prompt the user for unit cost--in 
+        // Prompt the user for unit cost--in
         // $ per sq. unit
         cout << "Enter the cost ($/sq " << units << "): ";
         cin >> unit_cost;
@@ -68,8 +68,8 @@ int main() {
         // Compute the room cost
         room_cost = area * unit_cost;
 
-        // Print dimensions to 1 decimal place.        
-        cout.precision(1);  
+        // Print dimensions to 1 decimal place.
+        cout.precision(1);
 
         // Let us add spacing--simulate a table
 
@@ -118,5 +118,5 @@ int main() {
 
 
     // The program completed without issue
-    return 0;   
+    return 0;
 }

@@ -18,7 +18,7 @@ RoomCollection::Node::Node(Room d)
 }
 
 /**
- * 
+ *
  */
 RoomCollection::RoomCollection() {
     head       = nullptr;
@@ -26,7 +26,7 @@ RoomCollection::RoomCollection() {
 }
 
 /**
- * 
+ *
  */
 void RoomCollection::add( Room toAdd ) {
     assert( actualSize < MAX_ROOMS );
@@ -52,7 +52,7 @@ void RoomCollection::add( Room toAdd ) {
         }
 
         // Add the new Node
-        it->next = newNode;        
+        it->next = newNode;
     }
 
     // Increment the size
@@ -60,7 +60,7 @@ void RoomCollection::add( Room toAdd ) {
 }
 
 /**
- * 
+ *
  */
 int RoomCollection::size() const {
     return this->actualSize;

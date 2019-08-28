@@ -21,7 +21,7 @@ Move promptForMove();
  * Prompt the user to enter yes (y) or no (n)
  *
  * @param msg message with which to prompt the user
- * 
+ *
  * @return bool true if the user specified yes and false otherwise
  *
  * @pre msg is not the empty string--i.e., !msg.empty()

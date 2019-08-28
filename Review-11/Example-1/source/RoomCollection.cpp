@@ -12,14 +12,14 @@ using namespace std;
 using namespace std::rel_ops;
 
 /**
- * 
+ *
  */
 RoomCollection::RoomCollection() {
     actualSize = 0;
 }
 
 /**
- * 
+ *
  */
 void RoomCollection::add( Room toAdd ) {
     assert( actualSize < MAX_ROOMS );
@@ -32,7 +32,7 @@ void RoomCollection::add( Room toAdd ) {
 }
 
 /**
- * 
+ *
  */
 int RoomCollection::size() const {
     return this->actualSize;
@@ -46,7 +46,7 @@ void RoomCollection::sort() {
 }
 
 /**
- * 
+ *
  */
 Room& RoomCollection::operator[]( int loc ) {
     return rooms[loc];
@@ -59,7 +59,7 @@ void RoomCollection::display( std::ostream &outs ) const {
     /*
      * This is the standard array for loop.
      * It is used every time an operation needs
-     * to be performed on every element in an 
+     * to be performed on every element in an
      * array--e.g.,
      *   - Input
      *   - Output

@@ -18,7 +18,7 @@ RoomCollection::Node::Node(Room d)
 }
 
 /**
- * 
+ *
  */
 RoomCollection::RoomCollection() {
     head       = nullptr;
@@ -26,11 +26,11 @@ RoomCollection::RoomCollection() {
 }
 
 /**
- * 
+ *
  */
 void RoomCollection::add( Room toAdd ) {
     assert( actualSize < MAX_ROOMS );
-        
+
     // Array version
     //rooms[actualSize++] = toAdd;
 
@@ -64,7 +64,7 @@ void RoomCollection::add( Room toAdd ) {
 }
 
 /**
- * 
+ *
  */
 int RoomCollection::size() const {
     return this->actualSize;

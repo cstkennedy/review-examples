@@ -12,7 +12,7 @@
 using namespace std;
 
 /**
- * Compute the area of a room and the cost of 
+ * Compute the area of a room and the cost of
  * flooring for the room
  */
 int main() {
@@ -23,7 +23,7 @@ int main() {
     double unit_cost = 0;
     double room_cost = 0;
 
-    // A boolean variable can be either true, yes, 
+    // A boolean variable can be either true, yes,
     // or false, no.
     // We will use this var as our loop condition
     bool try_again;
@@ -42,7 +42,7 @@ int main() {
     try_again = true;
 
     while( try_again ){
-        // Let us prompt the user for unit cost--in 
+        // Let us prompt the user for unit cost--in
         // $ per sq. unit
         cout << "Enter the cost ($/sq " << units << "): ";
         cin >> unit_cost;
@@ -76,12 +76,12 @@ int main() {
          cout.setf( ios::fixed );
          cout.precision( 1 );
 
-         You are more likely to see 
+         You are more likely to see
          the alternative:
             cout << fixed << setprecision(1) << x;
 
-         Both methods are correct. 
-        */    
+         Both methods are correct.
+        */
 
         // Output a Room Summary
         cout << "\n"
@@ -115,12 +115,12 @@ int main() {
         }
         */
 
-        // While the above conditional block is correct, 
+        // While the above conditional block is correct,
         // it is unnecessary. We can set again directly--i.e., store
         // the result of the condition
         try_again = (yn_response == 'Y');
     }
 
     // The program completed without issue
-    return 0;   
+    return 0;
 }

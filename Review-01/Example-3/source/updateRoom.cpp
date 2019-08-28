@@ -12,7 +12,7 @@
 using namespace std;
 
 /**
- * Compute the area of a room and the cost of 
+ * Compute the area of a room and the cost of
  * flooring for the room
  */
 int main() {
@@ -30,7 +30,7 @@ int main() {
     // user.
     string units = "ft";
 
-    // Let us prompt the user for unit cost--in 
+    // Let us prompt the user for unit cost--in
     // $ per sq. unit
     cout << "Enter the cost ($/sq " << units << "): ";
     cin >> unit_cost;
@@ -67,12 +67,12 @@ int main() {
      cout.setf( ios::fixed );
      cout.precision( 1 );
 
-     You are more likely to see 
+     You are more likely to see
      the alternative:
         cout << fixed << setprecision(1) << x;
 
-     Both methods are correct. 
-    */    
+     Both methods are correct.
+    */
 
     // Output a Room Summary
     cout << "\n"
@@ -89,5 +89,5 @@ int main() {
 
 
     // The program completed without issue
-    return 0;   
+    return 0;
 }

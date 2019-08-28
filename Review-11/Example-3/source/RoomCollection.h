@@ -12,11 +12,9 @@
 /**
  * This class serves as a container of Room objects.
  * <p>
- * The purpose of this class is to abstract the
- * details (hide the details) from the remainder of
- * the code. This serves to minimize the impact
- * in the event I need to change the underlying data 
- * structure.
+ * The purpose of this class is to abstract the details (hide the details) from
+ * the remainder of the code. This serves to minimize the impact in the event I
+ * need to change the underlying data structure.
  */
 class RoomCollection {
     private:
@@ -24,7 +22,7 @@ class RoomCollection {
          *
          */
         struct Node {
-            Room data; 
+            Room data;
             Node *next;
 
             /**
@@ -38,7 +36,7 @@ class RoomCollection {
         /**
          * The first node in our list
          */
-        Node *head; 
+        Node *head;
 
         /**
          * The current number of Room objects.

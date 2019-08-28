@@ -10,7 +10,7 @@
 using namespace std;
 
 /**
- * Compute the area of a room and the cost of 
+ * Compute the area of a room and the cost of
  * flooring for the room
  */
 int main() {
@@ -18,16 +18,16 @@ int main() {
     double length;
 
     /*
-     * I have separated the declaration and definition of both the width 
+     * I have separated the declaration and definition of both the width
      * and length vars.
-     *  
+     *
      * Setting these to some _zero_ value is referred to as initialization.
      */
     width  = 0;
     length = 0;
 
     /*
-     * You will usually see these two steps combined. 
+     * You will usually see these two steps combined.
      * E.g., I could have written:
      *
      *      double width  = 0;
@@ -50,5 +50,5 @@ int main() {
     cout << "\n";
 
     // The program completed without issue
-    return 0;   
+    return 0;
 }

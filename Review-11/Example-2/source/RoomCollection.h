@@ -15,7 +15,7 @@
  * The purpose of this class is to abstract the
  * details (hide the details) from the remainder of
  * the code. This serves to minimize the impact
- * in the event I need to change the underlying data 
+ * in the event I need to change the underlying data
  * structure.
  */
 class RoomCollection {
@@ -24,7 +24,7 @@ class RoomCollection {
          *
          */
         struct Node {
-            Room data; 
+            Room data;
             Node *next;
 
             /**
@@ -38,7 +38,7 @@ class RoomCollection {
         /**
          * The first node in our list
          */
-        Node *head; 
+        Node *head;
 
         /**
          * The current number of Room objects.
@@ -62,8 +62,8 @@ class RoomCollection {
         void add( Room toAdd );
 
         /**
-         * Sort the Rooms 
-         * <p> 
+         * Sort the Rooms
+         * <p>
          * Sorting a linked list is a topic more
          * appropriate for CS 361. We will not
          * implement this function

@@ -4,7 +4,7 @@
 //typedef int Move;
 
 /**
- * A row-column pair 
+ * A row-column pair
  */
 struct Move {
     int row;

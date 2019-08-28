@@ -10,10 +10,10 @@ using namespace std;
 
 int main() {
     // Integer Input
-    int num_1    = 1; // First integer 
+    int num_1    = 1; // First integer
     int num_2    = 2; // Second integer
 
-    // Results of integer arithmetic    
+    // Results of integer arithmetic
     int i_addition       = 0;
     int i_subtraction    = 0;
     int i_multiplication = 0;
@@ -29,13 +29,13 @@ int main() {
     double d_subtraction    = 0;
     double d_multiplication = 0;
     double d_division       = 0;
-    
+
     // Prompt the user for 2 integers
     cout << "Enter a value for num_1: ";
     cin >> num_1;
 
     cout << "Enter a value for num_2: ";
-    cin >> num_2;         
+    cin >> num_2;
 
     cout << "\n";
 
@@ -67,7 +67,7 @@ int main() {
     d_addition       = num_3 + num_4;
     d_subtraction    = num_3 - num_4;
     d_multiplication = num_3 * num_4;
-    d_division       = num_3 / num_4;   
+    d_division       = num_3 / num_4;
 
     // Formatting
     cout.setf( ios::fixed );
@@ -82,7 +82,7 @@ int main() {
          << left << setw(18) << "Subtraction"    << ": "<< right << setw(8) << d_subtraction    << "\n"
          << left << setw(18) << "Multiplication" << ": "<< right << setw(8) << d_multiplication << "\n"
          << left << setw(18) << "Division"       << ": "<< right << setw(8) << d_division       << "\n"
-         << "\n";    
+         << "\n";
 
     return 0;
 }
