@@ -14,7 +14,7 @@ const std::string UNITS = "ft";
  *
  */
 Room::Room() {
-    this->length    = 1; // length = 1;
+    this->length    = 1;  // length = 1;
     this->width     = 1;
     this->unit_cost = 1;
 }

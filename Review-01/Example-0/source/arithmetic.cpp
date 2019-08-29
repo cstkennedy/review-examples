@@ -10,8 +10,8 @@ using namespace std;
 
 int main() {
     // Integer Input
-    int num_1    = 1; // First integer
-    int num_2    = 2; // Second integer
+    int num_1    = 1;  // First integer
+    int num_2    = 2;  // Second integer
 
     // Results of integer arithmetic
     int i_addition       = 0;
@@ -21,8 +21,8 @@ int main() {
     int i_modulus        = 0;
 
     // Double Input
-    double num_3 = 1; // First real number
-    double num_4 = 2; // Second real number
+    double num_3 = 1;  // First real number
+    double num_4 = 2;  // Second real number
 
     // Results of double arithmetic
     double d_addition       = 0;
@@ -44,7 +44,7 @@ int main() {
     i_subtraction    = num_1 - num_2;
     i_multiplication = num_1 * num_2;
     i_division       = num_1 / num_2;
-    i_modulus        = num_1 % num_2; // % is the remainder from integer division
+    i_modulus        = num_1 % num_2;  // % is the remainder from integer division
 
     // Output the results
     cout << left << setw(18) << "Addition"       << ": "<< right << setw(8) << i_addition       << "\n"

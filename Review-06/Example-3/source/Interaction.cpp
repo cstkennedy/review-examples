@@ -15,7 +15,7 @@ double promptForInt( std::string msg );
  *
  */
 double promptForInt( std::string msg ) {
-    int ipt = 0; // Value entered by the user
+    int ipt = 0;  // Value entered by the user
 
     std::cout << msg << ": ";
     std::cin >> ipt;

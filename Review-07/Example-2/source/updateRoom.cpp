@@ -43,7 +43,7 @@ int main() {
     // knowledge of a room count
     for( int i = 0; i < num_rooms; i++ ) {
         // Let us use string concatenation
-        double uc= 0; // temporary unit cost
+        double uc= 0;  // temporary unit cost
         uc = promptForDouble( ("Enter the cost ($/sq " + UNITS + ")") );
 
         rooms[i].unit_cost = uc;

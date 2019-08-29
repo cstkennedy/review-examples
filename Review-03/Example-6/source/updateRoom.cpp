@@ -22,8 +22,8 @@ struct Room {
     double width;
     double area;
 
-    double unit_cost; ///< cost for one sq. unit of flooring
-    double room_cost; ///< cost for flooring
+    double unit_cost;  ///< cost for one sq. unit of flooring
+    double room_cost;  ///< cost for flooring
 };
 
 /**
@@ -147,7 +147,7 @@ int main() {
     // Let us switch to a for loop
     for( int i = 0; i < num_rooms; i++ ) {
         // Let us use string concatenation
-        double uc= 0; // temporary unit cost
+        double uc= 0;  // temporary unit cost
         uc = promptForDouble(
             ( "Enter the cost ($/sq " + UNITS + ")" )
         );
