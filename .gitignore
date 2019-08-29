@@ -35,3 +35,8 @@
 # Scratch (temp) File & Directory Ignore rules
 Scratch
 **.bak
+style-check*.txt
+
+
+# vim Ignore files
+**.swp
