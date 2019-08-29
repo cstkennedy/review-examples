@@ -63,14 +63,14 @@ int main() {
 
     cout << "\n";
 
-    //Perform double arithmetic
+    // Perform double arithmetic
     d_addition       = num_3 + num_4;
     d_subtraction    = num_3 - num_4;
     d_multiplication = num_3 * num_4;
     d_division       = num_3 / num_4;
 
     // Formatting
-    cout.setf( ios::fixed );
+    cout.setf(ios::fixed);
     cout.precision(4);
 
     /*

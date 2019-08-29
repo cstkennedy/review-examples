@@ -23,7 +23,7 @@ const std::string UNITS = "ft";
  * Print a blank line - we will discuss the meaning of *inline*
  * in a future Review Session
  */
-inline void println( std::ostream& outs=std::cout ) {
+inline void println(std::ostream& outs=std::cout) {
     outs << "\n";
 }
 
@@ -34,7 +34,7 @@ inline void println( std::ostream& outs=std::cout ) {
  *
  * @return double value entered by the user
  */
-double promptForDouble( std::string msg );
+double promptForDouble(std::string msg);
 
 /**
  * Prompt the user for a Yes or No response
@@ -44,7 +44,7 @@ double promptForDouble( std::string msg );
  * @return bool true if the user indicated Yes
  *     and false otherwise
  */
-bool promptForYesNo( std::string msg );
+bool promptForYesNo(std::string msg);
 
 /**
  * Generate and display a summary for a single (one) room
@@ -56,7 +56,7 @@ bool promptForYesNo( std::string msg );
  * @param u_c cost for one sq. unit of flooring
  * @param area flooring required for the room--in sq. units
  */
-void printRoomSummary( /*std::string units,*/ double l, double w, double r_c, double u_c, double area );
+void printRoomSummary(/*std::string units,*/ double l, double w, double r_c, double u_c, double area);
 
 /**
  * Compute the area of a room and the cost of flooring
@@ -69,7 +69,7 @@ void printRoomSummary( /*std::string units,*/ double l, double w, double r_c, do
  * @param area
  * @param room_cost
  */
-void computeRoomMetrics( double length, double width, double unit_cost, double &area, double &room_cost );
+void computeRoomMetrics(double length, double width, double unit_cost, double &area, double &room_cost);
 
 /**
  * Prompt the user for dimensions of a single room.
@@ -77,7 +77,7 @@ void computeRoomMetrics( double length, double width, double unit_cost, double &
  * @param length variable--location--into which the length will be stored
  * @param wdith variable--location--into which the width will be stored
  */
-void promptForDimensions( double &length, double &width );
+void promptForDimensions(double &length, double &width);
 
 /**
  * Compute the area of a room and the cost of
@@ -101,22 +101,22 @@ int main() {
 
     // Set common formatting--in this case
     // fixed decimal notation
-    cout.setf( ios::fixed );
+    cout.setf(ios::fixed);
 
     // Allow the user to process multiple rooms
-    while( try_again ){
+    while (try_again) {
         // Let us use string concatenation
         unit_cost = promptForDouble(
-            ( "Enter the cost ($/sq " + UNITS + ")" )
+            ("Enter the cost ($/sq " + UNITS + ")")
         );
 
         println();
-        promptForDimensions( length, width );
-        computeRoomMetrics( length, width, unit_cost, area, room_cost );
-        printRoomSummary( /*units,*/ length, width, room_cost, unit_cost, area );
+        promptForDimensions(length, width);
+        computeRoomMetrics(length, width, unit_cost, area, room_cost);
+        printRoomSummary(/*units,*/ length, width, room_cost, unit_cost, area);
         println();
 
-        try_again = promptForYesNo( "Process another room? (Y/N)" );
+        try_again = promptForYesNo("Process another room? (Y/N)");
 
         println();
     }
@@ -128,7 +128,7 @@ int main() {
 /**
  *
  */
-double promptForDouble( std::string msg ) {
+double promptForDouble(std::string msg) {
     double value = 0;
 
     cout << msg << ": ";
@@ -140,7 +140,7 @@ double promptForDouble( std::string msg ) {
 /**
  *
  */
-bool promptForYesNo( std::string msg ) {
+bool promptForYesNo(std::string msg) {
     // Prompt the user for Y/N
     char yn_response = 'n';
 
@@ -149,7 +149,7 @@ bool promptForYesNo( std::string msg ) {
 
     // Let us convert the user response to upper case.
     // We will use the built-in toupper function.
-    yn_response = toupper( yn_response );
+    yn_response = toupper(yn_response);
 
     // We can set again directly--i.e., store
     // the result of the condition
@@ -160,7 +160,7 @@ bool promptForYesNo( std::string msg ) {
 /**
  *
  */
-void printRoomSummary( /*std::string units,*/ double l, double w, double r_c, double u_c, double area ) {
+void printRoomSummary(/*std::string units,*/ double l, double w, double r_c, double u_c, double area) {
     // Print dimensions to 1 decimal place.
     cout.precision(1);
 
@@ -190,9 +190,9 @@ void printRoomSummary( /*std::string units,*/ double l, double w, double r_c, do
 /**
  *
  */
-void computeRoomMetrics( double length, double width, double unit_cost, double &area, double &room_cost ) {
+void computeRoomMetrics(double length, double width, double unit_cost, double &area, double &room_cost) {
     // Compute the area
-    area = ( width * length );
+    area = (width * length);
 
     // Compute the room cost
     room_cost = area * unit_cost;
@@ -201,7 +201,7 @@ void computeRoomMetrics( double length, double width, double unit_cost, double &
 /**
  *
  */
-void promptForDimensions( double &length, double &width ) {
-    width  = promptForDouble( "Enter the room width" );
-    length = promptForDouble( "Enter the room length" );
+void promptForDimensions(double &length, double &width) {
+    width  = promptForDouble("Enter the room width");
+    length = promptForDouble("Enter the room length");
 }

@@ -23,7 +23,7 @@ const std::string UNITS = "ft";
  * Print a blank line - we will discuss the meaning of *inline*
  * in a future Review Session
  */
-inline void println( std::ostream& outs=std::cout ) {
+inline void println(std::ostream& outs=std::cout) {
     outs << "\n";
 }
 
@@ -34,7 +34,7 @@ inline void println( std::ostream& outs=std::cout ) {
  *
  * @return double value entered by the user
  */
-double promptForDouble( std::string msg );
+double promptForDouble(std::string msg);
 
 /**
  * Prompt the user for a Yes or No response
@@ -44,7 +44,7 @@ double promptForDouble( std::string msg );
  * @return bool true if the user indicated Yes
  *     and false otherwise
  */
-bool promptForYesNo( std::string msg );
+bool promptForYesNo(std::string msg);
 
 /**
  * Generate and display a summary for a single (one) room
@@ -56,7 +56,7 @@ bool promptForYesNo( std::string msg );
  * @param u_c cost for one sq. unit of flooring
  * @param area flooring required for the room--in sq. units
  */
-void printRoomSummary( double l, double w, double r_c, double u_c, double area );
+void printRoomSummary(double l, double w, double r_c, double u_c, double area);
 
 /**
  * Compute the area of a room and the cost of flooring
@@ -69,7 +69,7 @@ void printRoomSummary( double l, double w, double r_c, double u_c, double area )
  * @param area
  * @param room_cost
  */
-void computeRoomMetrics( double length, double width, double unit_cost, double &area, double &room_cost );
+void computeRoomMetrics(double length, double width, double unit_cost, double &area, double &room_cost);
 
 /**
  * Prompt the user for dimensions of a single room.
@@ -77,7 +77,7 @@ void computeRoomMetrics( double length, double width, double unit_cost, double &
  * @param length variable--location--into which the length will be stored
  * @param wdith variable--location--into which the width will be stored
  */
-void promptForDimensions( double &length, double &width );
+void promptForDimensions(double &length, double &width);
 
 /**
  * Compute the area of a room and the cost of
@@ -99,21 +99,21 @@ int main() {
 
     // Set common formatting--in this case
     // fixed decimal notation
-    cout.setf( ios::fixed );
+    cout.setf(ios::fixed);
 
     // Prompt the user for the desired number of rooms
     cout << "How many rooms? : ";
     cin >> num_rooms;
 
-    //while( try_again ){
+    //while (try_again) {
     // This is now count controlled--i.e., we have a priori
     // knowledge of a room count
     //
     // Let us switch to a for loop
-    for( int i = 0; i < num_rooms; i++ ) {
+    for(int i = 0; i < num_rooms; i++) {
         // Let us use string concatenation
         unit_cost = promptForDouble(
-            ( "Enter the cost ($/sq " + UNITS + ")" )
+            ("Enter the cost ($/sq " + UNITS + ")")
         );
 
         println();
@@ -121,13 +121,13 @@ int main() {
         // Some values are associated with one another--i.e.,
         // they are always used together. Can these values
         // be considered to represent one Room?
-        promptForDimensions( length, width );
-        computeRoomMetrics( length, width, unit_cost, area, room_cost );
-        printRoomSummary( length, width, room_cost, unit_cost, area );
+        promptForDimensions(length, width);
+        computeRoomMetrics(length, width, unit_cost, area, room_cost);
+        printRoomSummary(length, width, room_cost, unit_cost, area);
 
         println();
 
-        //try_again = promptForYesNo( "Process another room? (Y/N)" );
+        //try_again = promptForYesNo("Process another room? (Y/N)");
         //println();
     }
 
@@ -138,7 +138,7 @@ int main() {
 /**
  *
  */
-double promptForDouble( std::string msg ) {
+double promptForDouble(std::string msg) {
     double value = 0;
 
     cout << msg << ": ";
@@ -150,14 +150,14 @@ double promptForDouble( std::string msg ) {
 /**
  *
  */
-bool promptForYesNo( std::string msg ) {
+bool promptForYesNo(std::string msg) {
     // Prompt the user for Y/N
     char yn_response = 'n';
 
     cout << msg << ": ";
     cin >> yn_response;
 
-    yn_response = toupper( yn_response );
+    yn_response = toupper(yn_response);
 
     return (yn_response == 'Y');
 }
@@ -165,7 +165,7 @@ bool promptForYesNo( std::string msg ) {
 /**
  *
  */
-void printRoomSummary( double l, double w, double r_c, double u_c, double area ) {
+void printRoomSummary(double l, double w, double r_c, double u_c, double area) {
     // Print dimensions to 1 decimal place.
     cout.precision(1);
 
@@ -195,9 +195,9 @@ void printRoomSummary( double l, double w, double r_c, double u_c, double area )
 /**
  *
  */
-void computeRoomMetrics( double length, double width, double unit_cost, double &area, double &room_cost ) {
+void computeRoomMetrics(double length, double width, double unit_cost, double &area, double &room_cost) {
     // Compute the area
-    area = ( width * length );
+    area = (width * length);
 
     // Compute the room cost
     room_cost = area * unit_cost;
@@ -206,7 +206,7 @@ void computeRoomMetrics( double length, double width, double unit_cost, double &
 /**
  *
  */
-void promptForDimensions( double &length, double &width ) {
-    width  = promptForDouble( "Enter the room width" );
-    length = promptForDouble( "Enter the room length" );
+void promptForDimensions(double &length, double &width) {
+    width  = promptForDouble("Enter the room width");
+    length = promptForDouble("Enter the room length");
 }

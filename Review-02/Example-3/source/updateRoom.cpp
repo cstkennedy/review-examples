@@ -18,7 +18,7 @@ using namespace std;
  *
  * @return double value entered by the user
  */
-double promptForDouble( std::string msg );
+double promptForDouble(std::string msg);
 
 /**
  * Prompt the user for a Yes or No response
@@ -28,7 +28,7 @@ double promptForDouble( std::string msg );
  * @return bool true if the user indicated Yes
  *     and false otherwise
  */
-bool promptForYesNo( std::string msg );
+bool promptForYesNo(std::string msg);
 
 /**
  * Generate and display a summary for a single (one) room
@@ -40,7 +40,7 @@ bool promptForYesNo( std::string msg );
  * @param u_c cost for one sq. unit of flooring
  * @param area flooring required for the room--in sq. units
  */
-void printRoomSummary( std::string units, double l, double w, double r_c, double u_c, double area );
+void printRoomSummary(std::string units, double l, double w, double r_c, double u_c, double area);
 
 /**
  * Compute the area of a room and the cost of flooring
@@ -53,7 +53,7 @@ void printRoomSummary( std::string units, double l, double w, double r_c, double
  * @param area
  * @param room_cost
  */
-void computeRoomMetrics( double length, double width, double unit_cost, double &area, double &room_cost );
+void computeRoomMetrics(double length, double width, double unit_cost, double &area, double &room_cost);
 
 /**
  * Compute the area of a room and the cost of
@@ -77,30 +77,30 @@ int main() {
 
     // Set common formatting--in this case
     // fixed decimal notation
-    cout.setf( ios::fixed );
+    cout.setf(ios::fixed);
 
     // Allow the user to process multiple rooms
-    while( try_again ){
+    while (try_again) {
         // Let us use string concatenation
         unit_cost = promptForDouble(
-            ( "Enter the cost ($/sq " + units + ")" )
+            ("Enter the cost ($/sq " + units + ")")
         );
 
         // Print a blank line
         cout << "\n";
 
         // Prompt the user for width and length
-        width  = promptForDouble( "Enter the room width" );
-        length = promptForDouble( "Enter the room length" );
+        width  = promptForDouble("Enter the room width");
+        length = promptForDouble("Enter the room length");
 
-        computeRoomMetrics( length, width, unit_cost, area, room_cost );
+        computeRoomMetrics(length, width, unit_cost, area, room_cost);
 
-        printRoomSummary( units, length, width, room_cost, unit_cost, area );
+        printRoomSummary(units, length, width, room_cost, unit_cost, area);
 
         // Print a blank line
         cout << "\n";
 
-        try_again = promptForYesNo( "Process another room? (Y/N)" );
+        try_again = promptForYesNo("Process another room? (Y/N)");
 
         // Print a blank line
         cout << "\n";
@@ -113,7 +113,7 @@ int main() {
 /**
  *
  */
-double promptForDouble( std::string msg ) {
+double promptForDouble(std::string msg) {
     double value = 0;
 
     cout << msg << ": ";
@@ -125,7 +125,7 @@ double promptForDouble( std::string msg ) {
 /**
  *
  */
-bool promptForYesNo( std::string msg ) {
+bool promptForYesNo(std::string msg) {
     // Prompt the user for Y/N
     char yn_response = 'n';
 
@@ -134,7 +134,7 @@ bool promptForYesNo( std::string msg ) {
 
     // Let us convert the user response to upper case.
     // We will use the built-in toupper function.
-    yn_response = toupper( yn_response );
+    yn_response = toupper(yn_response);
 
     // We can set again directly--i.e., store
     // the result of the condition
@@ -145,7 +145,7 @@ bool promptForYesNo( std::string msg ) {
 /**
  *
  */
-void printRoomSummary( std::string units, double l, double w, double r_c, double u_c, double area ) {
+void printRoomSummary(std::string units, double l, double w, double r_c, double u_c, double area) {
     // Print dimensions to 1 decimal place.
     cout.precision(1);
 
@@ -175,9 +175,9 @@ void printRoomSummary( std::string units, double l, double w, double r_c, double
 /**
  *
  */
-void computeRoomMetrics( double length, double width, double unit_cost, double &area, double &room_cost ) {
+void computeRoomMetrics(double length, double width, double unit_cost, double &area, double &room_cost) {
     // Compute the area
-    area = ( width * length );
+    area = (width * length);
 
     // Compute the room cost
     room_cost = area * unit_cost;

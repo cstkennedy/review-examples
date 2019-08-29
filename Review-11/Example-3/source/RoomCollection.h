@@ -63,7 +63,7 @@ class RoomCollection {
         /**
          * Add a new Room
          */
-        void add( Room toAdd );
+        void add(Room toAdd);
 
         /**
          * Return the current size
@@ -73,11 +73,11 @@ class RoomCollection {
         /**
          * Print all Rooms within the collection
          */
-        void display( std::ostream &outs ) const;
+        void display(std::ostream &outs) const;
 };
 
 inline
-std::ostream& operator<<( std::ostream &outs, const RoomCollection &prt) {
+std::ostream& operator<<(std::ostream &outs, const RoomCollection &prt) {
     prt.display(outs);
 
     return outs;

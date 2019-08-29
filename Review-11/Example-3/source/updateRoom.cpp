@@ -37,14 +37,14 @@ int main() {
 
     // Set common formatting--in this case
     // fixed decimal notation
-    cout.setf( ios::fixed );
+    cout.setf(ios::fixed);
 
-    for( int i = 0; i < num_rooms; i++ ) {
+    for (int i = 0; i < num_rooms; i++) {
         Room new_room;
 
-        new_room.setUnitCost( promptForDouble( ("Enter the cost ($/sq " + UNITS + ")") ) );
-        new_room.setWidth(    promptForDouble( "Enter the room width"                  ) );
-        new_room.setLength(   promptForDouble( "Enter the room length"                 ) );
+        new_room.setUnitCost(promptForDouble(("Enter the cost ($/sq " + UNITS + ")")));
+        new_room.setWidth(promptForDouble("Enter the room width"));
+        new_room.setLength(promptForDouble("Enter the room length"));
 
         rooms.add(new_room);
 

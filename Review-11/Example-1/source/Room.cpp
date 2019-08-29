@@ -22,7 +22,7 @@ Room::Room() {
 /**
  *
  */
-Room::Room( double l, double w, double u ) {
+Room::Room(double l, double w, double u) {
     length    = l;
     width     = w;
     unit_cost = u;
@@ -32,14 +32,14 @@ Room::Room( double l, double w, double u ) {
  *
  */
 double Room::area() const {
-    return ( width * length );
+    return (width * length);
 }
 
 /**
  *
  */
 double Room::flooringCost() const {
-    return ( area() * unit_cost );
+    return (area() * unit_cost);
 }
 
 /**

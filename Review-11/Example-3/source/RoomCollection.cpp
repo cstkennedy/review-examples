@@ -28,12 +28,12 @@ RoomCollection::RoomCollection() {
 /**
  *
  */
-void RoomCollection::add( Room toAdd ) {
-    assert( actualSize < MAX_ROOMS );
+void RoomCollection::add(Room toAdd) {
+    assert(actualSize < MAX_ROOMS);
 
     Node *newNode = new Node(toAdd);
 
-    if( head == nullptr ) {
+    if(head == nullptr) {
         // Add the very first node
         head = newNode;
     }
@@ -47,7 +47,7 @@ void RoomCollection::add( Room toAdd ) {
 
         // Traverse the list and stop at
         // the last node
-        while( it->next != nullptr ) {
+        while (it->next != nullptr) {
             it = it->next;
         }
 
@@ -69,12 +69,12 @@ int RoomCollection::size() const {
 /**
  * Print all Rooms within the collection
  */
-void RoomCollection::display( std::ostream &outs ) const {
+void RoomCollection::display(std::ostream &outs) const {
     /*
      * This is the standard array for loop.
      */
     /*
-    for( int i = 0; i < actualSize; i++ ) {
+    for (int i = 0; i < actualSize; i++) {
         // Note: i to (i+1) for output
         cout << "--Room #" << (i+1) << "\n"
              << rooms[i]
@@ -88,7 +88,7 @@ void RoomCollection::display( std::ostream &outs ) const {
     Node *it = head;
     int    i = 0;
 
-    while( it != nullptr ) {
+    while (it != nullptr) {
         outs << "--Room #" << (++i) << "\n";
         (it->data).display(outs);
         outs << "\n";
@@ -102,7 +102,7 @@ void RoomCollection::display( std::ostream &outs ) const {
     // a for loop
     int    i = 0;
 
-    for( Node* it = head; it != nullptr; it = it->next ) {
+    for (Node* it = head; it != nullptr; it = it->next) {
         outs << "--Room #" << (++i) << "\n"
              << (it->data)          << "\n";
     }

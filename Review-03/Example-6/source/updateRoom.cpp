@@ -38,7 +38,7 @@ const std::string UNITS = "ft";
  * Print a blank line - we will discuss the meaning of *inline*
  * in a future Review Session
  */
-inline void println( std::ostream& outs=std::cout ) {
+inline void println(std::ostream& outs=std::cout) {
     outs << "\n";
 }
 
@@ -49,7 +49,7 @@ inline void println( std::ostream& outs=std::cout ) {
  *
  * @return double value entered by the user
  */
-double promptForDouble( std::string msg );
+double promptForDouble(std::string msg);
 
 /**
  * Prompt the user for a Yes or No response
@@ -59,14 +59,14 @@ double promptForDouble( std::string msg );
  * @return bool true if the user indicated Yes
  *     and false otherwise
  */
-bool promptForYesNo( std::string msg );
+bool promptForYesNo(std::string msg);
 
 /**
  * Generate and display a summary for a single (one) room
  *
  * @param prt Room for which to print the summary
  */
-void printRoomSummary( const Room &prt );
+void printRoomSummary(const Room &prt);
 
 /**
  * Compute the area of a room and the cost of flooring
@@ -74,8 +74,8 @@ void printRoomSummary( const Room &prt );
  *
  * @param r Room for which to compute all metrics
  */
-void computeRoomMetrics( Room &r );
-//void computeRoomMetrics( double length, double width, double unit_cost, double &area, double &room_cost );
+void computeRoomMetrics(Room &r);
+//void computeRoomMetrics(double length, double width, double unit_cost, double &area, double &room_cost);
 
 
 /**
@@ -84,7 +84,7 @@ void computeRoomMetrics( Room &r );
  * @param length variable--location--into which the length will be stored
  * @param wdith variable--location--into which the width will be stored
  */
-void promptForDimensions( double &length, double &width );
+void promptForDimensions(double &length, double &width);
 
 /**
  * Compute the area of a room and the cost of
@@ -121,7 +121,7 @@ int main() {
 
     // Set common formatting--in this case
     // fixed decimal notation
-    cout.setf( ios::fixed );
+    cout.setf(ios::fixed);
 
     // Prompt the user for the desired number of rooms
     cout << "How many rooms? : ";
@@ -138,18 +138,18 @@ int main() {
     */
 
     // We can now allocate one array of Rooms
-    rooms = new Room[ num_rooms ];
+    rooms = new Room[num_rooms];
 
-    //while( try_again ){
+    //while (try_again) {
     // This is now count controlled--i.e., we have a priori
     // knowledge of a room count
     //
     // Let us switch to a for loop
-    for( int i = 0; i < num_rooms; i++ ) {
+    for (int i = 0; i < num_rooms; i++) {
         // Let us use string concatenation
         double uc= 0;  // temporary unit cost
         uc = promptForDouble(
-            ( "Enter the cost ($/sq " + UNITS + ")" )
+            ("Enter the cost ($/sq " + UNITS + ")")
         );
 
         // Take note of the line below.
@@ -158,7 +158,7 @@ int main() {
         // you to access one attribute of a struct (Room).
         rooms[i].unit_cost = uc;
         // We could add parens for clarity
-        //(( rooms[i] ).unit_cost) = uc;
+        //((rooms[i]).unit_cost) = uc;
 
         println();
 
@@ -169,12 +169,12 @@ int main() {
             rooms[i].width
         );
 
-        computeRoomMetrics( rooms[i] );
+        computeRoomMetrics(rooms[i]);
     }
 
     // We want to print all room summaries after all input is complete
-    for( int i = 0; i < num_rooms; i++ ) {
-        printRoomSummary( rooms[i] );
+    for (int i = 0; i < num_rooms; i++) {
+        printRoomSummary(rooms[i]);
 
         println();
     }
@@ -186,7 +186,7 @@ int main() {
 /**
  *
  */
-double promptForDouble( std::string msg ) {
+double promptForDouble(std::string msg) {
     double value = 0;
 
     cout << msg << ": ";
@@ -198,14 +198,14 @@ double promptForDouble( std::string msg ) {
 /**
  *
  */
-bool promptForYesNo( std::string msg ) {
+bool promptForYesNo(std::string msg) {
     // Prompt the user for Y/N
     char yn_response = 'n';
 
     cout << msg << ": ";
     cin >> yn_response;
 
-    yn_response = toupper( yn_response );
+    yn_response = toupper(yn_response);
 
     return (yn_response == 'Y');
 }
@@ -213,7 +213,7 @@ bool promptForYesNo( std::string msg ) {
 /**
  *
  */
-void printRoomSummary( const Room &prt ) {
+void printRoomSummary(const Room &prt) {
     // Print dimensions to 1 decimal place.
     cout.precision(1);
 
@@ -243,9 +243,9 @@ void printRoomSummary( const Room &prt ) {
 /**
  *
  */
-void computeRoomMetrics( Room &r ) {
+void computeRoomMetrics(Room &r) {
     // Compute the area
-    r.area = ( r.width * r.length );
+    r.area = (r.width * r.length);
 
     // Compute the room cost
     r.room_cost = r.area * r.unit_cost;
@@ -254,7 +254,7 @@ void computeRoomMetrics( Room &r ) {
 /**
  *
  */
-void promptForDimensions( double &length, double &width ) {
-    width  = promptForDouble( "Enter the room width" );
-    length = promptForDouble( "Enter the room length" );
+void promptForDimensions(double &length, double &width) {
+    width  = promptForDouble("Enter the room width");
+    length = promptForDouble("Enter the room length");
 }

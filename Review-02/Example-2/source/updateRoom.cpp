@@ -18,7 +18,7 @@ using namespace std;
  *
  * @return double value entered by the user
  */
-double promptForDouble( std::string msg );
+double promptForDouble(std::string msg);
 
 /**
  * Prompt the user for a Yes or No response
@@ -28,7 +28,7 @@ double promptForDouble( std::string msg );
  * @return bool true if the user indicated Yes
  *     and false otherwise
  */
-bool promptForYesNo( std::string msg );
+bool promptForYesNo(std::string msg);
 
 /**
  * Compute the area of a room and the cost of
@@ -52,10 +52,10 @@ int main() {
 
     // Set common formatting--in this case, fixed decimal
     // notation
-    cout.setf( ios::fixed );
+    cout.setf(ios::fixed);
 
     // Allow the user to process multiple rooms
-    while( try_again ){
+    while (try_again) {
         // Prompt the user for unit cost--in
         // $ per sq. unit
         //cout << "Enter the cost ($/sq " << units << "): ";
@@ -63,7 +63,7 @@ int main() {
 
         // Let us use string concatenation
         unit_cost = promptForDouble(
-            ( "Enter the cost ($/sq " + units + ")" )
+            ("Enter the cost ($/sq " + units + ")")
         );
 
         // Print a blank line
@@ -72,14 +72,14 @@ int main() {
         // Prompt the user for width and length
         //cout << "Enter the room width : " << flush;
         //cin >> width;
-        width = promptForDouble( "Enter the room width" );
+        width = promptForDouble("Enter the room width");
 
         //cout << "Enter the room length: " << flush;
         //cin >> length;
-        length = promptForDouble( "Enter the room length" );
+        length = promptForDouble("Enter the room length");
 
         // Compute the area
-        area = ( width * length );
+        area = (width * length);
 
         // Compute the room cost
         room_cost = area * unit_cost;
@@ -114,7 +114,7 @@ int main() {
         // Print a blank line
         cout << "\n";
 
-        try_again = promptForYesNo( "Process another room? (Y/N)" );
+        try_again = promptForYesNo("Process another room? (Y/N)");
 
         // Print a blank line
         cout << "\n";
@@ -127,7 +127,7 @@ int main() {
 /**
  *
  */
-double promptForDouble( std::string msg ) {
+double promptForDouble(std::string msg) {
     double value = 0;
 
     cout << msg << ": ";
@@ -139,7 +139,7 @@ double promptForDouble( std::string msg ) {
 /**
  *
  */
-bool promptForYesNo( std::string msg ) {
+bool promptForYesNo(std::string msg) {
     // Prompt the user for Y/N
     char yn_response = 'n';
 
@@ -148,7 +148,7 @@ bool promptForYesNo( std::string msg ) {
 
     // Let us convert the user response to upper case.
     // We will use the built-in toupper function.
-    yn_response = toupper( yn_response );
+    yn_response = toupper(yn_response);
 
     // We can set again directly--i.e., store
     // the result of the condition

@@ -48,14 +48,14 @@ class Room {
          * @param u cost for 1 sq unit of flooring
          *
          */
-        Room( double l, double w, double u );
+        Room(double l, double w, double u);
 
         /**
          * Set the length
          *
          * @param v replacement value
          */
-        void setLength( double v );
+        void setLength(double v);
 
         /**
          * Retrieve the length
@@ -67,7 +67,7 @@ class Room {
          *
          * @param v replacement value
          */
-        void setWidth( double v );
+        void setWidth(double v);
 
         /**
          * Retrieve the width
@@ -79,7 +79,7 @@ class Room {
          *
          * @param v replacement value
          */
-        void setUnitCost( double v );
+        void setUnitCost(double v);
 
         /**
          * Retrieve the unit cost
@@ -118,7 +118,7 @@ class Room {
  *
  */
 inline
-void Room::setLength( double v ) {
+void Room::setLength(double v) {
     this->length = v;
 }
 
@@ -134,7 +134,7 @@ double Room::getLength() const {
  *
  */
 inline
-void Room::setWidth( double v ) {
+void Room::setWidth(double v) {
     this->width = v;
 }
 
@@ -150,7 +150,7 @@ double Room::getWidth() const {
  *
  */
 inline
-void Room::setUnitCost( double v ) {
+void Room::setUnitCost(double v) {
     this->unit_cost = v;
 }
 
@@ -169,7 +169,7 @@ double Room::getUnitCost() const {
  * display or print function.
  */
 inline
-std::ostream& operator<<( std::ostream &outs, const Room &prt ) {
+std::ostream& operator<<(std::ostream &outs, const Room &prt) {
     prt.display(outs);
 
     return outs;

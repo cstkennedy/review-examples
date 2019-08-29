@@ -33,10 +33,10 @@ int main() {
 
     // Set common formatting--in this case, fixed decimal
     // notation
-    cout.setf( ios::fixed );
+    cout.setf(ios::fixed);
 
     // Allow the user to process multiple rooms
-    while( try_again ){
+    while (try_again) {
         // Prompt the user for unit cost--in
         // $ per sq. unit
         cout << "Enter the cost ($/sq " << units << "): ";
@@ -53,7 +53,7 @@ int main() {
         cin >> length;
 
         // Compute the area
-        area = ( width * length );
+        area = (width * length);
 
         // Compute the room cost
         room_cost = area * unit_cost;
@@ -96,7 +96,7 @@ int main() {
 
         // Let us convert the user response to upper case.
         // We will use the built-in toupper function.
-        yn_response = toupper( yn_response );
+        yn_response = toupper(yn_response);
 
         // We can set again directly--i.e., store
         // the result of the condition

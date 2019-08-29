@@ -40,7 +40,7 @@ class RoomCollection {
         /**
          * Add a new Room
          */
-        void add( Room toAdd );
+        void add(Room toAdd);
 
         /**
          * Sort the Rooms
@@ -55,17 +55,17 @@ class RoomCollection {
         /**
          * Array Subscript Operator
          */
-        Room& operator[]( int loc );
+        Room& operator[](int loc);
 
         /**
          * Print all Rooms within the collection
          */
-        void display( std::ostream &outs ) const;
+        void display(std::ostream &outs) const;
 
 };
 
 inline
-std::ostream& operator<<( std::ostream &outs, const RoomCollection &prt) {
+std::ostream& operator<<(std::ostream &outs, const RoomCollection &prt) {
     prt.display(outs);
 
     return outs;

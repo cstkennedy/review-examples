@@ -21,8 +21,8 @@ RoomCollection::RoomCollection() {
 /**
  *
  */
-void RoomCollection::add( Room toAdd ) {
-    assert( actualSize < MAX_ROOMS );
+void RoomCollection::add(Room toAdd) {
+    assert(actualSize < MAX_ROOMS);
 
     rooms[actualSize] = toAdd;
     actualSize++;
@@ -48,14 +48,14 @@ void RoomCollection::sort() {
 /**
  *
  */
-Room& RoomCollection::operator[]( int loc ) {
+Room& RoomCollection::operator[](int loc) {
     return rooms[loc];
 }
 
 /**
  * Print all Rooms within the collection
  */
-void RoomCollection::display( std::ostream &outs ) const {
+void RoomCollection::display(std::ostream &outs) const {
     /*
      * This is the standard array for loop.
      * It is used every time an operation needs
@@ -75,7 +75,7 @@ void RoomCollection::display( std::ostream &outs ) const {
      *
      * Array indices are always between 0 and size-1, inclusive.
      */
-    for( int i = 0; i < actualSize; i++ ) {
+    for (int i = 0; i < actualSize; i++) {
         // Note: i to (i+1) for output
         cout << "--Room #" << (i+1) << "\n"
              << rooms[i]
