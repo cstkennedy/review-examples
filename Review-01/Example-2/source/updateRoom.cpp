@@ -15,7 +15,8 @@ using namespace std;
  * Compute the area of a room and the cost of
  * flooring for the room
  */
-int main() {
+int main()
+{
     // I have moved all variable declarations to the top.
     // I have combined the initializations and declarations.
     double width  = 0;
@@ -38,7 +39,7 @@ int main() {
     cin >> length;
 
     // Compute the area
-    area = ( width * length );
+    area = (width * length);
 
     // Output a Room Summary
     cout << "\n"

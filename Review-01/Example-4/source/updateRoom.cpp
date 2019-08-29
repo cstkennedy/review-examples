@@ -15,7 +15,8 @@ using namespace std;
  * Compute the area of a room and the cost of
  * flooring for the room
  */
-int main() {
+int main()
+{
     double width  = 0;
     double length = 0;
     double area   = 0;
@@ -41,7 +42,7 @@ int main() {
     // could use a do-while loop.
     try_again = true;
 
-    while( try_again ){
+    while (try_again) {
         // Let us prompt the user for unit cost--in
         // $ per sq. unit
         cout << "Enter the cost ($/sq " << units << "): ";
@@ -60,13 +61,13 @@ int main() {
         cin >> length;
 
         // Compute the area
-        area = ( width * length );
+        area = (width * length);
 
         // Compute the room cost
         room_cost = area * unit_cost;
 
         // Print dimensions to 1 decimal place.
-        cout.setf( ios::fixed );
+        cout.setf(ios::fixed);
         cout.precision(1);
 
         /*
