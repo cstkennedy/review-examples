@@ -15,16 +15,12 @@ def promptUser(units):
      * @return false if an input error occurred
     """
 
-    # Prompt the user for unit cost--in
-    # $ per sq. unit
+    # Prompt the user for unit cost--in $ per sq. unit
     unit_cost = input("Enter the cost ($/sq " + units + "): ")
 
-    # Print a blank line
     print()
 
     # Prompt the user for width and length
-    #   Step 1: Display a message
-    #   Step 2: Read the value
     width = input("Enter the room width : ")
     length = input("Enter the room length: ")
 
@@ -76,7 +72,7 @@ def printSummary(units, length, width, area, room_cost, unit_cost):
     # Output a Room Summary
     print()
 
-    print("Length : {:8.1f} {}%n".format(length, units))
+    print("Length : {:8.1f} {}".format(length, units))
     print("Width  : {:8.1f} {}".format(width, units))
     print("Area   : {:8.1f} {}".format(area, units))
     print()
@@ -93,11 +89,9 @@ def main():
      * @param argv collection of all command line arguments.
     """
 
-
     # Display units
     units = "ft"
 
-    # Allow the user to process multiple rooms
     try_again = True
 
     while try_again:
@@ -117,11 +111,7 @@ def main():
         # the result of the boolean expression
         try_again = yn_response == 'Y'
 
-        # Print a blank line
         print()
-    
-
-    # The program completed without issue
 
 
 if __name__ == "__main__":
