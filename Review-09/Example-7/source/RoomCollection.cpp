@@ -77,7 +77,7 @@ void RoomCollection::display( std::ostream &outs ) const {
      */
     for( int i = 0; i < actualSize; i++ ) {
         // Note: i to (i+1) for output
-        cout << "--Room #" << (i+1) << "\n"
+        outs << "--Room #" << (i+1) << "\n"
              << rooms[i]
              << "\n";
     }

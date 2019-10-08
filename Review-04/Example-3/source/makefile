@@ -2,7 +2,7 @@ MAINPROG=updateRoom
 
 SOURCES:=$(wildcard *.cpp)
 OBJECTS=$(SOURCES:.cpp=.o)
-FLAGS=-std=c++11
+FLAGS=-std=c++11 -Wall -Wextra -Wpedantic -Weffc++
 
 all: $(SOURCES) $(MAINPROG)
 
