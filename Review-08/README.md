@@ -1,7 +1,7 @@
 This Review discussed ADTs.
 
   1. Example 1 - This is the final version of the Room Renovation Example from
-     the Member Functions discussion--i.e., [Review Session 7](#cs333review7). 
+     the Member Functions discussion--i.e., [Review 7](#cs333review7). 
 
   2. Example 2 - In this example I discussed two _constructors_, a _Default
      Constructor_ (no arguments) and a _Non-Default Constructor_ (with

@@ -1,4 +1,4 @@
-During this Review Session, we discussed _arrays_ and _structs_. The specific
+During this Review, we discussed _arrays_ and _structs_. The specific
 areas of interest included:
 
   1. Parameters &amp; Arguments
@@ -9,7 +9,7 @@ areas of interest included:
   4. Arrays of Structs
   5. Documenting Functions &amp; structs
 
-Example 1 was our starting point. It was copied from Review Session 02 Example
+Example 1 was our starting point. It was copied from Review 02 Example
 6. Examples 2-8--included in Review-03.zip--were discussed in the context of
 the above topics. The Notes directory contains the Excel document used to
 visualize arrays and structs. 

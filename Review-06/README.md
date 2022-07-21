@@ -1,5 +1,5 @@
-This Review Session was recorded--i.e., there was no live session. During this
-Review Session, I discussed [Stepwise
+This Review was recorded--i.e., there was no live session. During this
+Review, I discussed [Stepwise
 Refinement](../../Public/stepwise/index.html#stepwiserefinement) and [Top-Down
 Design](../../Public/stepwise/#top-downdesign)
 

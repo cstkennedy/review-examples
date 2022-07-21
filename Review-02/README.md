@@ -1,4 +1,4 @@
-During this Review Session, we discussed functions:
+During this Review, we discussed functions:
 
   1. Function Prototypes
   2. Function Definitions

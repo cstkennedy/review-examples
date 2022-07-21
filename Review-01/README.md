@@ -1,6 +1,4 @@
-# Review Session 1
-
-The focus of the Review Session was on the following topics:
+The focus of the Review was on the following topics:
 
   1. Variables
   2. Input

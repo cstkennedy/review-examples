@@ -1,4 +1,4 @@
-This Review Session served as our Operator Overloading Discussion. I discussed
+This Review served as our Operator Overloading Discussion. I discussed
 7 examples. Examples 1 through 5 demonstrated the 
   
   - Logical Equivalence Operator, `operator==`

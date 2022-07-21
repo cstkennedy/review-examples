@@ -1,4 +1,4 @@
-This Review Session served as our *Linked Lists* discussion.
+This Review served as our *Linked Lists* discussion.
 
   1. Example 1 - This is the final version of the Room Renovation Example from
      the Operator Overloading discussion--i.e., [Review 9](../Review-09). 
